@@ -1,0 +1,14 @@
+<!-- profile.html -->
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Welcome, {{ user_profile.user.username }}</h2>
+  <p>Email: {{ user_profile.user.email }}</p>
+  
+  {% if user_profile.profile_image %}
+    <img src="{{ user_profile.profile_image.url }}" alt="Profile Picture" width="150" height="150">
+  {% else %}
+    <p>No profile picture uploaded.</p>
+  {% endif %}
+  
+  <a href="{% url 'logout' %}">Logout</a>
+{% endblock %}
