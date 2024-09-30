@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'auth_project.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-database_url=os.environ.get("DATABAST_URL")
+database_url=os.environ.get("DATABASE_URL")
 import dj_database_url
 DATABASES = {
     'default':dj_database_url.parse(database_url)
