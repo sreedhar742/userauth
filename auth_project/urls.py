@@ -26,7 +26,7 @@ def home(request):
     return HttpResponse("<h1>welcome to user_authentications</h1>")
 urlpatterns = [
     path('',home),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,name='admin'),
     path('register/', views.register, name='register'),
     path('login/', views.login_view, name='login'),
     path('profile/', views.profile_view, name='profile'),
